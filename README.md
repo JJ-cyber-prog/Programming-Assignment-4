@@ -15,7 +15,7 @@ Vis_df = Vis_df[['Name', 'Gender', 'Track', 'Math']]
 // Print 
 Vis_df
 
-a. Instrumentation majors who lives in Luzon
+# a. Instrumentation majors who lives in Luzon
 
 // Create table for Instrumentation majors whose hometown is Luzon, with scores greater than 70
 Instru_df = df[(df['Track'] == 'Instrumentation') & (df['Hometown'] == 'Luzon') & (df['Electronics'] > 70)]
@@ -26,7 +26,7 @@ Instru_df = Instru_df[['Name', 'GEAS', 'Electronics']]
 // Print
 Instru_df
 
-b. Mindanaoan female board exam takers
+# b. Mindanaoan female board exam takers
 
 // Create table for female board exam takers whose hometown is Mindanao and an average of >= 55
 Mindy_df = df[(df['Hometown'] == 'Mindanao') & (df['Gender'] == 'Female')].copy()
