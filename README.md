@@ -6,38 +6,28 @@ This is my fourth programming assignment. It talks about Data Wrangling and Data
 
 # For number 1, create the following data frames based on the format provided:
 
-// Creating table
 Vis_df = df[(df['Hometown'] == 'Visayas') & (df['Math'] < 70)]
 
-// Select necessary columns
 Vis_df = Vis_df[['Name', 'Gender', 'Track', 'Math']]
 
-// Print 
 Vis_df
 
 # a. Instrumentation majors who lives in Luzon
 
-// Create table for Instrumentation majors whose hometown is Luzon, with scores greater than 70
 Instru_df = df[(df['Track'] == 'Instrumentation') & (df['Hometown'] == 'Luzon') & (df['Electronics'] > 70)]
 
-// Select necessary columns
 Instru_df = Instru_df[['Name', 'GEAS', 'Electronics']]
 
-// Print
 Instru_df
 
 # b. Mindanaoan female board exam takers
 
-// Create table for female board exam takers whose hometown is Mindanao and an average of >= 55
 Mindy_df = df[(df['Hometown'] == 'Mindanao') & (df['Gender'] == 'Female')].copy()
 
-// Getting the average of the scores of Mindanaon, female board exam takers with an average of >= 55
 Mindy_df.loc[:, 'Average'] = Mindy_df[['Math', 'GEAS', 'Electronics']].mean(axis = 1)
 
-// Select necessary columns
 Mindy_df = Mindy_df[['Name', 'Track', 'Electronics', 'Average']]
 
-// Print
 Mindy_df
 
 # For number 2, create a visualization that shows how the different features contributes to average grade.
